@@ -1,4 +1,3 @@
-# ECB_GDP
 A telepítés előfeltétele, python 3 használata, és az alábbi csomagok telepítése:
 ```sh
 apt update
@@ -68,4 +67,162 @@ Munkafájlok:
   ecb_debt_gdp_cache.csv - 76280 bytes
   ksh_cpi_cache.csv - 15272 bytes
 
+```
+
+EU-ra vonatkoztatva a script használata:
+```sh
+python3 ECBGD_EU.py
+```
+
+Ezt követően a következő üzenet várható:
+```sh
+=== EU Összehasonlító Államadósság és Infláció Elemző ===
+
+--- Magyarország (HU) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.HU.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_hu_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 105 rekord
+Dátum tartomány: 1999-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 52.2% - 83.8%
+✓ Magyarország államadósság: 105 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.HU.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_hu_cache.csv
+ECB HICP DF shape: (355, 32)
+ECB HICP végső adatok: 355 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-07-01 00:00:00
+Infláció tartomány: -1.4% - 28.9%
+✓ Magyarország infláció: 355 rekord
+
+--- Görögország (GR) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.GR.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_gr_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 101 rekord
+Dátum tartomány: 2000-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 102.8% - 212.9%
+✓ Görögország államadósság: 101 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.GR.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_gr_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -2.9% - 12.1%
+✓ Görögország infláció: 356 rekord
+
+--- Olaszország (IT) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.IT.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_it_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 105 rekord
+Dátum tartomány: 1999-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 103.5% - 157.7%
+✓ Olaszország államadósság: 105 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.IT.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_it_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -1.0% - 12.6%
+✓ Olaszország infláció: 356 rekord
+
+--- Franciaország (FR) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.FR.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_fr_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 105 rekord
+Dátum tartomány: 1999-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 58.7% - 117.7%
+✓ Franciaország államadósság: 105 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.FR.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_fr_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -0.8% - 7.3%
+✓ Franciaország infláció: 356 rekord
+
+--- Németország (DE) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.DE.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_de_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 101 rekord
+Dátum tartomány: 2000-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 57.6% - 81.0%
+✓ Németország államadósság: 101 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.DE.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_de_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -0.7% - 11.6%
+✓ Németország infláció: 356 rekord
+
+--- Spanyolország (ES) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.ES.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_es_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 105 rekord
+Dátum tartomány: 1999-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 34.9% - 124.2%
+✓ Spanyolország államadósság: 105 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.ES.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_es_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -1.5% - 10.7%
+✓ Spanyolország infláció: 356 rekord
+
+--- Portugália (PT) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.PT.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_pt_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 101 rekord
+Dátum tartomány: 2000-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 54.0% - 137.5%
+✓ Portugália államadósság: 101 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.PT.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_pt_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -1.8% - 10.6%
+✓ Portugália infláció: 356 rekord
+
+--- Belgium (BE) ---
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/GFS/Q.N.BE.W0.S13.S1.C.L.LE.GD.T._Z.XDC_R_B1GQ_CY._T.F.V.N._T?format=csv
+Cache mentve: ecb_debt_be_cache.csv
+ECB Debt DF shape: (105, 49)
+ECB Debt végső adatok: 105 rekord
+Dátum tartomány: 1999-03-31 00:00:00 - 2025-03-31 00:00:00
+Érték tartomány: 87.3% - 121.7%
+✓ Belgium államadósság: 105 rekord
+Letöltés: https://sdw-wsrest.ecb.europa.eu/service/data/ICP/M.BE.N.000000.4.ANR?format=csv
+Cache mentve: ecb_hicp_be_cache.csv
+ECB HICP DF shape: (356, 32)
+ECB HICP végső adatok: 356 rekord
+Dátum tartomány: 1996-01-01 00:00:00 - 2025-08-01 00:00:00
+Infláció tartomány: -1.7% - 13.1%
+✓ Belgium infláció: 356 rekord
+✓ Mentve: eu_debt_comparison.png
+✓ Mentve: eu_inflation_comparison.png
+✓ Mentve: hungary_combined_analysis.png
+
+=== ÖSSZEFOGLALÓ ===
+Államadósság adatok: 8 ország
+Infláció adatok: 8 ország
+Magyarország: államadósság 75.3% (2025-Q1), infláció: 4.2%
+Görögország: államadósság 152.5% (2025-Q1), infláció: 3.1%
+Olaszország: államadósság 137.9% (2025-Q1), infláció: 1.7%
+Franciaország: államadósság 114.1% (2025-Q1), infláció: 0.8%
+Németország: államadósság 62.3% (2025-Q1), infláció: 2.1%
+Spanyolország: államadósság 103.5% (2025-Q1), infláció: 2.7%
+Portugália: államadósság 96.4% (2025-Q1), infláció: 2.5%
+Belgium: államadósság 106.8% (2025-Q1), infláció: 2.6%
+
+Készült grafikonok:
+  • eu_debt_comparison.png - Államadósság összehasonlítás
+  • eu_inflation_comparison.png - Infláció összehasonlítás
+  • hungary_combined_analysis.png - Magyar kombinált elemzés
 ```
