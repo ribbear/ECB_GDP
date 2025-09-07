@@ -1,4 +1,4 @@
-A telepítés előfeltétele, python 3 használata, és az alábbi csomagok telepítése:
+A használat előfeltétele, python 3 használata, és az alábbi csomagok telepítése:
 ```sh
 apt update
 apt install python3-pandas python3-matplotlib python3-requests
